@@ -8,5 +8,5 @@
         - node
         - zsh
   tasks:
-    - include: fem-tasks/zsh.yml
-    - include: fem-tasks/node.yml
+    - include: ubuntu-fem-v2-tasks/fem-tasks/zsh.yml
+    - include: ubuntu-fem-v2-tasks/fem-tasks/node.yml
