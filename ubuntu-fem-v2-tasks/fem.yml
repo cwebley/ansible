@@ -7,6 +7,7 @@
       tags:
         - node
         - zsh
+        - ssh
   tasks:
     - include: fem-tasks/zsh.yml
     - include: fem-tasks/node.yml

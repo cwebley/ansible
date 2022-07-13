@@ -1,4 +1,7 @@
 - hosts: localhost
+  vars:
+    source_key: "./.ssh/id_rsa"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
   become: true
   pre_tasks:
     - name: Update cache
@@ -8,5 +11,6 @@
         - node
         - zsh
   tasks:
-    - include: ubuntu-fem-v2-tasks/fem-tasks/zsh.yml
-    - include: ubuntu-fem-v2-tasks/fem-tasks/node.yml
+    - include: tasks/ssh.yml
+    - include: tasks/zsh.yml
+    - include: tasks/node.yml
