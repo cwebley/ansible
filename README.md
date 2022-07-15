@@ -17,3 +17,10 @@ or to run directly:
 ```
 ansible-pull -U https://github.com/cwebley/ansible
 ```
+
+If trouble with ssh-key passphrases:
+
+```
+eval `ssh-agent -s`
+ssh-add
+```
