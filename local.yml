@@ -11,7 +11,9 @@
         - node
         - zsh
   tasks:
+    - include: tasks/core-setup.yml
     - include: tasks/ssh.yml
     - include: tasks/dotfiles.yml
     - include: tasks/zsh.yml
     - include: tasks/node.yml
+    - include: tasks/nvim-setup.yml
