@@ -4,7 +4,7 @@
     mode: 0700
     state: directory
   tags:
-    # - dotfiles
+    - dotfiles
     - ssh
 - name: Install ssh key
   copy:
@@ -12,7 +12,7 @@
     dest: "{{ dest_key }}"
     mode: 0600
   tags:
-    # - dotfiles
+    - dotfiles
     - ssh
 - name: Install ssh key public
   copy:
@@ -20,9 +20,10 @@
     dest: "{{ dest_key }}.pub"
     mode: 0644
   tags:
-    # - dotfiles
+    - dotfiles
     - ssh
-# TODO figure out how to use this ssh key in future tasks
+# only running as root, which is probably why this breaks atm
+# don't need to resolve this since this is a test playbook
 # - name: Set authorized key took from file
 #   authorized_key:
 #     user: "{{ lookup('env', 'USER') }}"
