@@ -51,4 +51,8 @@ Setup tool for one server
 ansible -i hosts.ini db -m setup
 ```
 
-
+This one isn't working, maybe ntp is not available on rockylinux8:
+install ntp as the root user (-b to become, default user is root)
+```
+ansible -i hosts.ini multi -b -m yum -a "name=ntp state=present"
+```
